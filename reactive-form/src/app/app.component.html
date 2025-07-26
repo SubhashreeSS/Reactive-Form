@@ -1,0 +1,17 @@
+<h1>Basic Reactive Form</h1>
+<form action="" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" placeholder="Enter your name" [formControl]="name"/>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" placeholder="Enter your email" [formControl]="email"/>
+  </div>
+  <button type="button" (click)="onSubmit()">Submit</button>
+  <button type="button" (click)="setValues()">Set value</button>
+  <br><br>
+  <h3>Form Values:</h3>
+  <p>Name: {{ name.value }}</p>
+  <p>Email: {{ email.value }}</p>
+</form>
